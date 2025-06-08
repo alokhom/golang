@@ -20,7 +20,6 @@ env:
   IMAGE: web
 
 
-
 jobs:
   setup-build-publish-deploy:
     name: Setup, Build, Publish, and Deploy
@@ -80,7 +79,7 @@ jobs:
         cluster_name: ${{ secrets.GKE_CLUSTER }}
         location: ${{ secrets.GKE_ZONE }}
         credentials: ${{ secrets.GKE_SA_KEY }}
-        project_id: ${{ env.PROJECT_ID }}
+        project_id: ${{ secrets.GKE_PROJECT }}
 
     # Build the Docker image
     - name: Build
