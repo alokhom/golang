@@ -18,7 +18,7 @@ env:
   GKE_ZONE: us-central1-c   # Add your cluster zone here.
   DEPLOYMENT_NAME: gke-test # Add your deployment name here.
   IMAGE: web
-  GCLOUD_PROJECT: ${{ env.GCLOUD_PROJECT }}
+
 
 
 jobs:
@@ -80,7 +80,7 @@ jobs:
         cluster_name: ${{ env.GKE_CLUSTER }}
         location: ${{ env.GKE_ZONE }}
         credentials: ${{ secrets.GKE_SA_KEY }}
-        project_id: ${{ env.GCLOUD_PROJECT }}
+        project_id: ${{ env.PROJECT_ID }}
 
     # Build the Docker image
     - name: Build
