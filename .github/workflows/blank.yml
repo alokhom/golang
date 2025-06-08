@@ -18,6 +18,8 @@ env:
   GKE_ZONE: us-central1-c   # Add your cluster zone here.
   DEPLOYMENT_NAME: gke-test # Add your deployment name here.
   IMAGE: web
+  GCLOUD_PROJECT: ${{ env.GCLOUD_PROJECT }}
+
 
 jobs:
   setup-build-publish-deploy:
