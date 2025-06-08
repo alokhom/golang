@@ -13,9 +13,9 @@ on:
       - 'releases/**'
 
 env:
-  PROJECT_ID: ${{ env.GCLOUD_PROJECT }}
-  GKE_CLUSTER: ${{ env.GKE_CLUSTER }}   # Add your cluster name here.
-  GKE_ZONE:  ${{ env.GKE_ZONE }}   # Add your cluster zone here.
+  PROJECT_ID: ${{ secret.GKE_PROJECT }}
+  #GKE_CLUSTER: ${{ env.GKE_CLUSTER }}   # Add your cluster name here.
+  #GKE_ZONE:  ${{ env.GKE_ZONE }}   # Add your cluster zone here.
   DEPLOYMENT_NAME: dev # Add your deployment name here.
   IMAGE: web
 
